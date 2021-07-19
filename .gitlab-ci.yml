@@ -1,0 +1,24 @@
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+  - node_modules/
+
+before_script:
+  - yarn install
+
+build:
+  stage: build
+  script:
+   - npm run generate
+
+deploy:
+  stage: deploy
+  only:
+   - master
+  script:
+   - npm run generate
+   - rm -rf /var/www/web/blog/
+   - cp -r public /var/www/web/blog
