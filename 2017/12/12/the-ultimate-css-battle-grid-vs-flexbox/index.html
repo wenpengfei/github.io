@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> CSS终极之战：Grid vs Flexbox · 夜色镇歌</title><meta name="description" content="CSS终极之战：Grid vs Flexbox - 文鹏飞"><meta name="baidu_union_verify" content="72cef2f38e5e048b980ace9972697c53"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://blog.catwen.cn/atom.xml" title="夜色镇歌"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="http://weibo.com/333241589" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="https://github.com/wenpengfei" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://500px.com/catwen" target="_blank" class="nav-list-link">500PX</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">CSS终极之战：Grid vs Flexbox</h1><div class="post-info">2017年12月12日</div><div class="post-content"><p>在过去几年里，<code>Flexbox</code>已经成了前端最流行的布局框架，这并不奇怪，因为我们可以很方便的用它去对齐元素。</p>
+<p>然而，前端村儿里面还有个叫<code>Grid</code>的小孩儿，他和<code>Flexbox</code>有很多功能相似的地方，有些地方他比<code>Flexbox</code>要好，但有也有不足。</p>
+<p>这也会变成让开发者们纠结的地方，应该用哪个？本文将会在宏观和微观上面对比两个模块。</p>
+<h2 id="一维-vs-二维"><a href="#一维-vs-二维" class="headerlink" title="一维 vs 二维"></a>一维 vs 二维</h2><blockquote>
+<p><code>Flexbox</code>用来做一维布局，<code>Grid</code>用来做二维布局</p>
+</blockquote>
+<p>意思是如果你只在一个方向上布局（比如在header里面放三个button），你需要使用<code>Flexbox</code></p>
+<p><img src="/images/the-ultimate-css-battle-grid-vs-flexbox/2.png" alt="img"></p>
+<p>他将会比<code>Grid</code>更加灵活，可以用更少的代码去实现并且更加容易维护。</p>
+<p>但是，如果你打算在两个维度上创建一个完整的布局，同时使用行和列，那么你应该使用<code>Grid</code></p>
+<h2 id="二维"><a href="#二维" class="headerlink" title="二维"></a>二维</h2><p><img src="/images/the-ultimate-css-battle-grid-vs-flexbox/3.png" alt="img"></p>
+<p>在这种情况下，<code>Grid</code>会更加灵活，并且会使你的标签更简单，代码更容易维护。</p>
+<p>你可以结合两者一起使用，在上面的例子中最完美的做法是使用<code>Grid</code>来布局页面，使用<code>Flexbox</code>去对齐header里面的内容。</p>
+<h2 id="内容优先-vs-布局优先"><a href="#内容优先-vs-布局优先" class="headerlink" title="内容优先 vs 布局优先"></a>内容优先 vs 布局优先</h2><p>两者的另一个核心区别是<code>Flexbox</code>以内容为基础，<code>Grid</code>以布局为基础，听起来有些抽象，我们来用一个实际的例子去解释一下。</p>
+<p>我们会用上一段提到的header，他的HTML是这样的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>Search<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>Logout<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在使用<code>Flexbox</code>之前，里面的div会堆叠在彼此之上：</p>
+<p><img src="/images/the-ultimate-css-battle-grid-vs-flexbox/4.png" alt="img"></p>
+<h2 id="Flexbox-header"><a href="#Flexbox-header" class="headerlink" title="Flexbox header"></a>Flexbox header</h2><p>当我们加了<code>display:flex</code>之后，他们会漂亮的在一条线上。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/the-ultimate-css-battle-grid-vs-flexbox/5.png" alt="img"></p>
+<p>为了让logout button 在最右边，我们简单的给他指定一个margin：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(3)</span> &#123;</span><br><span class="line">  <span class="attribute">margin-left</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="/images/the-ultimate-css-battle-grid-vs-flexbox/6.png" alt="img"></p>
+<p>值得注意的是：让元素本身决定他放在哪里，我们除了<code>display: flex</code>之外不添加任何东西。</p>
+<p>这是<code>Flexbox</code>和<code>Grid</code>的核心差别，当我们用<code>Grid</code>来创建这个header时，这个差别会更加明显。</p>
+<blockquote>
+<p>尽管用<code>Grid</code>创建一维的header不太合适，但在本文中去实现它却是一个很好的练习，因为它教会了我们关于<code>Flexbox</code>和<code>Grid</code>的核心区别</p>
+</blockquote>
+<h2 id="Grid-header"><a href="#Grid-header" class="headerlink" title="Grid header"></a>Grid header</h2><p>如果使用<code>Grid</code>会有多种方法。我准备用非常简单的一种去做，我们的<code>Grid</code>有十列，每一列都是一个单位宽度 。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(10, 1fr);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>他看起来和<code>Flexbox</code>的解决方案一样</p>
+<p><img src="/images/the-ultimate-css-battle-grid-vs-flexbox/7.png" alt="img"></p>
+<p>但是，我们可以在上帝视角去看两者有什么不同，我们来使用chrome的审查元素去看一下：</p>
+<p><img src="/images/the-ultimate-css-battle-grid-vs-flexbox/8.png" alt="img"></p>
+<p>最关键的区别就是，这种方式必须先定义布局的列。从定义列的宽度开始，然后我们才能将元素放在可用的单元格中。</p>
+<blockquote>
+<p>这种方式强迫我们去分割我们的header有多少列</p>
+</blockquote>
+<p>除非我们改变<code>Grid</code>，否则我们会被困死在10列中，但是在<code>Flexbox</code>中我们不会被这个麻烦困扰。</p>
+<p>为了把logout放在最右边，我们会把他放在第十列：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(3)</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column</span>: <span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>审查元素时，看起来是这样的：</p>
+<p><img src="/images/the-ultimate-css-battle-grid-vs-flexbox/9.png" alt="img"></p>
+<p>我们不能简单的添加一个<code>margin-left: auto;</code>因为它已经被放在了第三个单元格中，想要移动它，我们得再找一个单元格把它放进去。</p>
+<h2 id="结合两者"><a href="#结合两者" class="headerlink" title="结合两者"></a>结合两者</h2><p>现在我们看下如如何同时使用<code>Grid</code>和<code>Flexbox</code>来把header合并进我们的布局，我们先来创建布局。</p>
+<p><img src="/images/the-ultimate-css-battle-grid-vs-flexbox/10.png" alt="img"></p>
+<p>标签如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span>HEADER<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">aside</span>&gt;</span>MENU<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">main</span>&gt;</span>CONTENT<span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">footer</span>&gt;</span>FOOTER<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后是CSS：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(12, 1fr);</span><br><span class="line">  <span class="attribute">grid-template-rows</span>: <span class="number">50px</span> <span class="number">350px</span> <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>把元素放进<code>Grid</code>：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column</span>: span <span class="number">12</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">aside</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column</span>: span <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">main</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column</span>: span <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">footer</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column</span>: span <span class="number">12</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>下面仅需要来布置好header：我们把它从<code>Grid</code>中的元素转换为<code>Flexbox</code>容器。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现在我们把logout放在右边：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(3)</span> &#123;</span><br><span class="line">  <span class="attribute">margin-left</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现在我们有了同时使用<code>Grid</code>和<code>Flexbox</code>的完美布局。下面是这两个容器：</p>
+<p><img src="/images/the-ultimate-css-battle-grid-vs-flexbox/11.png" alt="img"></p>
+<p>所以现在你应该理解了<code>Flexbox</code> 和<code>Grid</code>的差别，也知道了如何结合两者使用。</p>
+<h2 id="浏览器支持"><a href="#浏览器支持" class="headerlink" title="浏览器支持"></a>浏览器支持</h2><p>本文截止前，全球77%流量的网站支持<code>Grid</code>，这个数字还在不断增长。</p>
+<blockquote>
+<p>我相信2018年将会是<code>Grid</code>的一年，他将获得突破，并将成为前端开发人员的必备技能，就像过去几年的<code>Flexbox</code>一样。</p>
+</blockquote>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/12/19/30-seconds-of-code/" class="prev">上一篇</a><a href="/2017/12/05/css-grid-is-better-than-bootstrap/" class="next">下一篇</a></div><div class="copyright"><p>© 2015 - 2021 <a href="http://blog.catwen.cn">文鹏飞</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script data-ad-client="ca-pub-9719602535480843" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?4705307d0962111e72a91c6e74aa83c9";
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s);
+})();</script></body></html>

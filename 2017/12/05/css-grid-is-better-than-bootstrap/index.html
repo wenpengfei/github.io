@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 为什么CSS Grid比Bootstrap更适合布局 · 夜色镇歌</title><meta name="description" content="为什么CSS Grid比Bootstrap更适合布局 - 文鹏飞"><meta name="baidu_union_verify" content="72cef2f38e5e048b980ace9972697c53"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://blog.catwen.cn/atom.xml" title="夜色镇歌"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="http://weibo.com/333241589" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="https://github.com/wenpengfei" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://500px.com/catwen" target="_blank" class="nav-list-link">500PX</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">为什么CSS Grid比Bootstrap更适合布局</h1><div class="post-info">2017年12月5日</div><div class="post-content"><p><img src="/images/css-grid-is-better-than-bootstrap/1.png" alt="img"><br><code>CSS Grid</code>是一种全新的创建布局方式，这是有史以来第一个合适的布局系统，并且是浏览器原生的，给我们带来了很多好处。</p>
+<p>当你和当今最流行的<code>Bootstrap</code>框架相比，grid的好处变的尤为清晰，您不仅可以创建在以前在不引入JavaScript的情况下无法实现的布局，而且您的代码将更易于维护和理解。</p>
+<p>本文中我会解释一下为什么。</p>
+<h2 id="标签会更加简洁"><a href="#标签会更加简洁" class="headerlink" title="标签会更加简洁"></a>标签会更加简洁</h2><p>相比<code>Bootstrap</code>，使用grid会使你的HTML更加干净，虽然这不是最重要的好处，但它可能会是你第一个注意到的。</p>
+<p>为了举例说明，我创建了一个布局，以便我们可以比较两个版本所需要的代码。</p>
+<p><img src="/images/css-grid-is-better-than-bootstrap/2.png" alt="img"></p>
+<blockquote>
+<p>注意：我在给出的例子中稍微设计了一下，但是他和我们比较<code>Bootstrap</code>没有任何关系，所以我只保留布局部分的CSS</p>
+</blockquote>
+<h2 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h2><p>先看一下<code>Bootstrap</code>需要创建的标签。<br><img src="/images/css-grid-is-better-than-bootstrap/3.png" alt="img"></p>
+<p>这里有两件事需要注意一下：</p>
+<ul>
+<li>每个row都需要一个<code>&lt;div&gt;</code>标签</li>
+<li>使用了class name来指定布局(<code>col-xs-2</code>)</li>
+</ul>
+<p>随着这种布局的复杂性增长，HTML也是如此。</p>
+<p>如果这是个响应式网站，它会看起来更复杂：<br><img src="/images/css-grid-is-better-than-bootstrap/4.png" alt="img"></p>
+<p>现在我们来看一下用Grid布局：<br><img src="/images/css-grid-is-better-than-bootstrap/5.png" alt="img"></p>
+<p>我可以在这里使用语义化元素，但我还是使用div来和<code>Bootstrap</code>对比。</p>
+<p>显然，grid用来布局看起来更简单，丑陋的类名和每行所需的额外的div标签一去不复返了，简简单单一个container和里面的item。</p>
+<p>与<code>Bootstrap</code>不同的是，随着布局复杂度的增加，Grid布局标签的复杂度将不会增加太多。</p>
+<p><code>Bootstrap</code>示例不需要添加任何CSS，引用一下就可以了。<code>CSS Grid</code>肯定需要添加。具体来说，是这样的：<br><img src="/images/css-grid-is-better-than-bootstrap/6.png" alt="img"></p>
+<p>这可能是一些人赞成<code>Bootstrap</code>的一个论点：你不用关心CSS，只需要在HTML中定义布局。但是，正如你将会明白的那样，当涉及到灵活性的时候，标签和布局之间的耦合会变成一个很大的问题。</p>
+<h2 id="更灵活"><a href="#更灵活" class="headerlink" title="更灵活"></a>更灵活</h2><p>假设您想要根据屏幕大小更改布局。 例如，将菜单拉到最上面一行，在移动设备上查看。</p>
+<p>换句话说，布局从这样：</p>
+<p><img src="/images/css-grid-is-better-than-bootstrap/2.png" alt="img"></p>
+<p>换成这样：</p>
+<p><img src="/images/css-grid-is-better-than-bootstrap/12.png" alt="img"></p>
+<h2 id="CSS-Grid"><a href="#CSS-Grid" class="headerlink" title="CSS Grid"></a>CSS Grid</h2><p>用<code>CSS Grid</code>的话会非常简单，我们只需要添加一个<code>media query</code>，布局就像变魔术一样变成了你想要的。</p>
+<p><img src="/images/css-grid-is-better-than-bootstrap/7.png" alt="img"></p>
+<p>你可以这样重新排列布局，不用担心HTML标签编写的顺序，这对开发人员和设计师都是很大的一个好处！</p>
+<h2 id="BootStrap"><a href="#BootStrap" class="headerlink" title="BootStrap"></a>BootStrap</h2><p>如果想在<code>Bootstrap</code>中做同样的事情，就必须得修改HTML了，需要调整标签的顺序。</p>
+<p><img src="/images/css-grid-is-better-than-bootstrap/8.png" alt="img"></p>
+<p>这个需求仅仅使用media query是远远不够的，你还得使用JavaScript。</p>
+<p>这个例子是我体会到的grid最大的好处</p>
+<h2 id="不再限死12列"><a href="#不再限死12列" class="headerlink" title="不再限死12列"></a>不再限死12列</h2><p>这个不是一个很大的问题，但是这个问题也困扰过我多次，因为<code>Bootstrap</code>的grid系统分为了12列，如果你想要一个5列的布局就会纠结，或是7列、9列、任何不会合为12列的。</p>
+<p><code>CSS Grid</code>就没有任何限制，你可以让grid正好有你想要的数量。这是一个7列的grid：</p>
+<p><img src="/images/css-grid-is-better-than-bootstrap/9.png" alt="img"></p>
+<p>通过设置<code>grid-template-columns : repeat(7, 1fr)</code>实现，就像这样：</p>
+<p><img src="/images/css-grid-is-better-than-bootstrap/10.png" alt="img"></p>
+<h2 id="浏览器支持"><a href="#浏览器支持" class="headerlink" title="浏览器支持"></a>浏览器支持</h2><p>当然也必须讨论一下浏览器支持，在撰写本文的时候，全球75%的网站流量支持<code>CSS Grid</code></p>
+<p><img src="/images/css-grid-is-better-than-bootstrap/11.png" alt="img"></p>
+<blockquote>
+<p><code>CSS Grid</code>是一个布局模块，它允许我们改变文档的布局，而不会干扰标签顺序。换句话说，CSS网格是一个纯粹的可视化工具，使用得当，对文档内容的表达应该没有影响。所以：在旧的浏览器中缺乏对<code>CSS Grid</code>的支持不影响访问者的体验，只是让体验不同。</p>
+</blockquote>
+<p><a href="https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163" target="_blank">原文链接</a></p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/12/12/the-ultimate-css-battle-grid-vs-flexbox/" class="prev">上一篇</a><a href="/2017/08/05/gitlab-ci-configuration/" class="next">下一篇</a></div><div class="copyright"><p>© 2015 - 2021 <a href="http://blog.catwen.cn">文鹏飞</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script data-ad-client="ca-pub-9719602535480843" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?4705307d0962111e72a91c6e74aa83c9";
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s);
+})();</script></body></html>
