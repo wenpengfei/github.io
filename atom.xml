@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.catwen.cn/"/>
-  <updated>2021-07-19T17:17:48.545Z</updated>
+  <updated>2021-07-19T17:26:00.521Z</updated>
   <id>http://blog.catwen.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.catwen.cn/2019/07/05/the-10-component-commandments/"/>
     <id>http://blog.catwen.cn/2019/07/05/the-10-component-commandments/</id>
     <published>2019-07-05T18:25:04.000Z</published>
-    <updated>2021-07-19T17:17:48.545Z</updated>
+    <updated>2021-07-19T17:26:00.521Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/the-10-component-commandments/1.jpg" alt="img"></p>
 <p>写一个公用的组件很难，你必须细心地考虑很多问题，比如应该暴露出哪些 <code>props</code>。</p>
@@ -106,7 +106,7 @@
     <link href="http://blog.catwen.cn/2019/05/25/how-to-use-traefik-as-a-reverse-proxy-for-docker-containers-on-centos-7/"/>
     <id>http://blog.catwen.cn/2019/05/25/how-to-use-traefik-as-a-reverse-proxy-for-docker-containers-on-centos-7/</id>
     <published>2019-05-25T17:19:00.000Z</published>
-    <updated>2021-07-19T17:17:48.545Z</updated>
+    <updated>2021-07-19T17:26:00.521Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>原文地址：<a href="https://www.digitalocean.com/community/tutorials/how-to-use-traefik-as-a-reverse-proxy-for-docker-containers-on-centos-7" target="_blank" rel="noopener">How To Use Traefik as a Reverse Proxy for Docker Containers on CentOS 7</a><br>译文出自：<a href="/2019/05/25/how-to-use-traefik-as-a-reverse-proxy-for-docker-containers-on-centos-7/" title="夜色镇歌的个人博客">夜色镇歌的个人博客</a></p>
@@ -207,7 +207,7 @@
     <link href="http://blog.catwen.cn/2018/05/10/how-to-escape-async-await-hell/"/>
     <id>http://blog.catwen.cn/2018/05/10/how-to-escape-async-await-hell/</id>
     <published>2018-05-10T08:33:38.000Z</published>
-    <updated>2021-07-19T17:17:48.545Z</updated>
+    <updated>2021-07-19T17:26:00.521Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/how-to-escape-async-await-hell/1.png" alt="img"></p>
 <blockquote>
@@ -270,7 +270,7 @@
     <link href="http://blog.catwen.cn/2018/02/01/7-hacks-for-es6-developers/"/>
     <id>http://blog.catwen.cn/2018/02/01/7-hacks-for-es6-developers/</id>
     <published>2018-02-01T11:19:06.000Z</published>
-    <updated>2021-07-19T17:17:48.545Z</updated>
+    <updated>2021-07-19T17:26:00.521Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-交换值"><a href="#1-交换值" class="headerlink" title="1. 交换值"></a>1. 交换值</h2><p>使用数组的解构交换值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="string">'world'</span>, b = <span class="string">'hello'</span></span><br><span class="line">[a, b] = [b, a]</span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// -&gt; hello</span></span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">// -&gt; world</span></span><br><span class="line"><span class="comment">// Yes, it's magic</span></span><br></pre></td></tr></table></figure>
@@ -303,7 +303,7 @@
     <link href="http://blog.catwen.cn/2018/01/30/build-an-offline-first-data-driven-pwa/"/>
     <id>http://blog.catwen.cn/2018/01/30/build-an-offline-first-data-driven-pwa/</id>
     <published>2018-01-30T14:11:11.000Z</published>
-    <updated>2021-07-19T17:17:48.545Z</updated>
+    <updated>2021-07-19T17:26:00.521Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/build-an-offline-first-data-driven-pwa/2.png" alt="img"></p>
 <blockquote>
@@ -455,7 +455,7 @@
     <link href="http://blog.catwen.cn/2018/01/18/best-practices-for-writing-react-components/"/>
     <id>http://blog.catwen.cn/2018/01/18/best-practices-for-writing-react-components/</id>
     <published>2018-01-18T16:55:03.000Z</published>
-    <updated>2021-07-19T17:17:48.545Z</updated>
+    <updated>2021-07-19T17:26:00.521Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/best-practices-for-writing-react-components/1.png" alt="img"></p>
 <p>刚接触 <code>React</code> 的时候，在一个又一个的教程上面看到很多种编写组件的方法，尽管那时候 <code>React</code> 框架已经相当成熟，但是并没有一个固定的规则去规范我们去写代码。</p>
@@ -544,7 +544,7 @@
     <link href="http://blog.catwen.cn/2018/01/15/typescript-parcel-react-mobx/"/>
     <id>http://blog.catwen.cn/2018/01/15/typescript-parcel-react-mobx/</id>
     <published>2018-01-15T09:29:20.000Z</published>
-    <updated>2021-07-19T17:17:48.545Z</updated>
+    <updated>2021-07-19T17:26:00.521Z</updated>
     
     <content type="html"><![CDATA[<p>项目地址：<a href="https://github.com/wenpengfei/parcel-typescript-react-boilerplate" target="_blank" rel="noopener">parcel-typescript-react-boilerplate</a> 欢迎批评指正，顺手点个星呗，另外赠送一个代码生成器，根据表结构生成<code>单表</code>的CURD页面，然后根据实际的业务手动修改即可：<a href="https://github.com/wenpengfei/react-admin-generator" target="_blank" rel="noopener">react-admin-generator</a></p>
 <h2 id="Parcel"><a href="#Parcel" class="headerlink" title="Parcel"></a>Parcel</h2><p>2017年底给开发者最大的惊喜非 <code>Parcel</code> 莫属了，使用过 <code>Webpack</code> 的同学都会有配置太过复杂的感受，甚至 <code>Webpack</code> 的维护者有时候做项目也会 <code>copy</code> 一些常用的配置。如果使用 <code>Parcel</code>，仅仅定义好 index.html、index.js和index.css 它就会为我们做好一切的打包工作，就像没有使用过任何打包工具一样，这样就很舒服。</p>
@@ -580,7 +580,7 @@
     <link href="http://blog.catwen.cn/2017/12/19/30-seconds-of-code/"/>
     <id>http://blog.catwen.cn/2017/12/19/30-seconds-of-code/</id>
     <published>2017-12-19T11:06:23.000Z</published>
-    <updated>2021-07-19T17:17:48.545Z</updated>
+    <updated>2021-07-19T17:26:00.521Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/30-seconds-of-code/1.png" alt="img"></p>
 <blockquote>
@@ -1098,7 +1098,7 @@
     <link href="http://blog.catwen.cn/2017/12/12/the-ultimate-css-battle-grid-vs-flexbox/"/>
     <id>http://blog.catwen.cn/2017/12/12/the-ultimate-css-battle-grid-vs-flexbox/</id>
     <published>2017-12-12T02:19:06.000Z</published>
-    <updated>2021-07-19T17:17:48.545Z</updated>
+    <updated>2021-07-19T17:26:00.521Z</updated>
     
     <content type="html"><![CDATA[<p>在过去几年里，<code>Flexbox</code>已经成了前端最流行的布局框架，这并不奇怪，因为我们可以很方便的用它去对齐元素。</p>
 <p>然而，前端村儿里面还有个叫<code>Grid</code>的小孩儿，他和<code>Flexbox</code>有很多功能相似的地方，有些地方他比<code>Flexbox</code>要好，但有也有不足。</p>
@@ -1182,7 +1182,7 @@
     <link href="http://blog.catwen.cn/2017/12/05/css-grid-is-better-than-bootstrap/"/>
     <id>http://blog.catwen.cn/2017/12/05/css-grid-is-better-than-bootstrap/</id>
     <published>2017-12-05T12:42:49.000Z</published>
-    <updated>2021-07-19T17:17:48.545Z</updated>
+    <updated>2021-07-19T17:26:00.521Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/css-grid-is-better-than-bootstrap/1.png" alt="img"><br><code>CSS Grid</code>是一种全新的创建布局方式，这是有史以来第一个合适的布局系统，并且是浏览器原生的，给我们带来了很多好处。</p>
 <p>当你和当今最流行的<code>Bootstrap</code>框架相比，grid的好处变的尤为清晰，您不仅可以创建在以前在不引入JavaScript的情况下无法实现的布局，而且您的代码将更易于维护和理解。</p>
@@ -1248,7 +1248,7 @@
     <link href="http://blog.catwen.cn/2017/08/05/gitlab-ci-configuration/"/>
     <id>http://blog.catwen.cn/2017/08/05/gitlab-ci-configuration/</id>
     <published>2017-08-05T14:46:20.000Z</published>
-    <updated>2021-07-19T17:17:48.545Z</updated>
+    <updated>2021-07-19T17:26:00.521Z</updated>
     
     <content type="html"><![CDATA[<p>先唠叨一下<code>持续集成</code>的概念和为什么要去用它，如果有一定了解的话可以跳过直接去看正文</p>
 <p><a href="https://zh.wikipedia.org/wiki/%E6%8C%81%E7%BA%8C%E6%95%B4%E5%90%88" target="_blank" rel="noopener">持续集成(Continuous integration简称CI)</a>是一种软件开发实践，即团队开发成员经常集成他们的工作，通过每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。每次集成都通过自动化的构建（包括编译，发布，自动化测试）来验证，从而尽早地发现集成错误。</p>
