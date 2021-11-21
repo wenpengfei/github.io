@@ -6,7 +6,8 @@ tags:
 
 ## 上网
 
-主[追风岛](https://admin.91zfdao.com/auth/register?code=B5pg)，备谷歌云，
+主[追风岛](https://admin.91zfdao.com/auth/register?code=B5pg)，备谷歌云
+
 - 软件方面，Mac 下用 `V2rayU`，iPhone 下用 `ShadowRocket`（切美区下载）
 - 通过 [Proxifier](https://www.proxifier.com/) 实现 terminal 科学上网
 - 家里是软路由，固件选择 爱快 + openwrt
