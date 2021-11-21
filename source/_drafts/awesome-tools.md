@@ -30,9 +30,10 @@ tags:
 
 配件
 - 键盘：HHKB Professional2 Type-S，自己买了个蓝牙模块装了上去
+- 鼠标：罗技 MX Master 3
 - 显示器：DELL U2718Q + DELL U2720QM
 - 耳机：索尼 WH-1000XM3 降噪比 BOSE QC35 强
-- 音响：哈曼卡顿 Aura Studio 3 琉璃3代，放在家里，低音效果不错
+- 音响：哈曼卡顿 Aura Studio 3 琉璃 3 代，放在家里偶尔听听歌，低音效果不错
 - 乐歌升降桌 + 人体工学椅
 - 明基 ScreenBar Plus
 - kindle
