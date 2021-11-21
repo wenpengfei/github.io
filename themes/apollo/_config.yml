@@ -1,18 +1,18 @@
 menu:
-    '博客': /
-    '归档': /archives/
-    '微博': http://weibo.com/333241589
-    'Github': https://github.com/wenpengfei
-    '500px': https://500px.com/catwen
-    Rss: /atom.xml
+  '博客': /
+  '归档': /archives/
+  '微博': http://weibo.com/333241589
+  'Github': https://github.com/wenpengfei
+  # '500px': https://500px.com/catwen
+  Rss: /atom.xml
 
 favicon: /favicon.png
 logo: /favicon.png
 
 # Comment
 # e.g disqus: seansun
-disqus: 
-duoshuo: 
+disqus:
+duoshuo:
 
 # Analytics
 # google-analytics:
