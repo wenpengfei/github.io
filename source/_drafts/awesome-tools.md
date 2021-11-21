@@ -17,11 +17,15 @@ tags:
 
 - VSCode
 - Terminal 用 iTerm2 + zsh + oh-my-zsh 的组合
+- Docker，这个不用解释了吧
 - ColorSnapper2，取色工具
 - Charles，抓包用
 - autojump，目录跳转
 - tig - git 扩展
 - bat，带行号的 cat，可以配 alias cat="bat"
+- Navicat，数据库客户端工具
+- BestTrace，查看网络路由情况
+- Sourcetree，Git 命令太多，有时候借助一下图形界面
 
 ## 硬件
 
@@ -50,11 +54,16 @@ tags:
 
 ## 软件
 
-- Notion，做笔记
+- Notion，做笔记，形成了一套适合自己的工作流
+- Obsidian，笔记，研究中
 - Paste，粘贴板管理
 - Bob，Mac 端翻译软件，支持划词翻译、截图翻译等
 - IINA，视频播放
 - Spotify，曲库挺全，家庭计划也很便宜
+- Motrix，开源的下载工具
+- Mos，丝般顺滑的滚动效果
+- 腾讯柠檬，垃圾清理
+- XMind，脑图
 
 ## 在线服务
 - carbon，根据源码生成图片
