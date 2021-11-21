@@ -1,7 +1,9 @@
 ---
 title: 5分钟教你看懂眼花缭乱的主板、CPU、显卡命名规则
+date: 2021-11-21 17:05:11
 tags:
 ---
+
 
 # 主板
 
@@ -160,7 +162,7 @@ TI：代表特殊版本，TI是增强版，Super 代表小幅增强版，SE 削�
 
 ## AMD 显卡
 
-拿 `AMD Radeon RX 5700 XT` 举例
+拿 `AMD Radeon RX 5700 XT` 举例：
 
 Radeon：显卡系列名称，有 Radeon，Radeon Pro……
 
