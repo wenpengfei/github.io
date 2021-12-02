@@ -64,6 +64,7 @@ tags:
 ## 在线服务
 - [carbon](https://carbon.now.sh/)，根据源码生成图片
 - [regex101](https://regex101.com/)，调正则表达式
+- [regexr](https://regexr.com/)，学习正则表达式
 - [30 seconds of code](https://30secondsofcode.org/)，各种代码片段
 - [astexplorer](https://astexplorer.net/)，调 ast
 - [globtester](https://globster.xyz/)，调 glob
@@ -74,5 +75,11 @@ tags:
 - [instapaper](https://www.instapaper.com/u)，稍后阅读
 - [emoji](http://www.webpagefx.com/tools/emoji-cheat-sheet/)，emoji 查询
 - [cssgradient](https://cssgradient.io/)，渐变色 css 生成
-- [best of js](https://bestof.js.org/)，对 github 做了一层筛选
+- [Best JavaScript](https://bestof.js.org/)，对 github 做了一层筛选
+- [CODEIF](https://unbug.github.io/codelf/)，变量命名神器
+- [docschina](https://docschina.org/)，优质的中文文档
+- [tools.lu](https://tool.lu/)，工具合集
+- [TinyPNG](https://tinypng.com/)，PNG/JPG 图片在线压缩利器
+- [FrontEndGitHub](https://github.com/FrontEndGitHub/FrontEndGitHub)，前端资源汇总
+
 
