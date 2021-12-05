@@ -1,7 +1,9 @@
 ---
 title: 写出整洁的 JavaScript 代码 ES6 版
+date: 2021-12-05 12:16:04
 tags:
 ---
+
 好的代码不仅仅是可以跑起来的代码，更是可以被其他人轻松阅读、重用和重构的代码，因为代码除了实现功能外，大部分的时间都是要被你或是团队其他成员维护的。
 
 <img src="/images/writing-clean-code-es6/1.png" style="width:80%" />
@@ -106,7 +108,7 @@ function didAgreeToAllTerms(user) {
 
 ## 使用默认参数
 
-直接使用默认值比短路语法或者在函数中加入判断语句更加简洁，值得注意的是，短路适用于所有被认为是“假”的值，例如 `false`、`null`、`undefined`、`''`、`""`、`0` 和 `NaN`，而默认参数仅替换 `undefined`。
+直接使用默认值比短路语法或者在函数中加入判断语句更加简洁，值得注意的是，短路语法适用于所有被认为是 `false` 的值，例如 `false`、`null`、`undefined`、`''`、`""`、`0` 和 `NaN`，而默认参数仅替换 `undefined`。
 
 ```javascript
 // 错误 ❌
@@ -123,7 +125,7 @@ function printAllFilesInDirectory(dir = "./") {
 
 ## 限制参数个数
 
-这一点有争议。函数的参数应该`不多于2个`，意思是函数的参数为 0 个 1 个或者 2 个，如果需要第三个参数的话说明：
+这一条有争议，函数的参数应该`不多于2个`，意思是函数的参数为 0 个 1 个或者 2 个，如果需要第三个参数的话说明：
 - 函数需要拆分
 - 可以把相关参数聚合成对象传递
 
@@ -203,7 +205,7 @@ function createPublicFile(name) {
 
 ## 不要重复自己（DRY）
 
-重复的代码不是一个好的信号，你复制粘贴了多少次，下次这部分代码修改的时候你就要就要同时修改几个地方。
+重复的代码不是一个好的信号，你复制粘贴了 N 次，下次这部分代码修改的时候你就要就要同时修改 N 个地方。
 
 ```javascript
 // 错误 ❌
@@ -300,7 +302,7 @@ function enrollStudentInCourse(course, student) {
 # 并发
 
 ## 避免使用回调
-[回调函数](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) 太乱了，所以 ES6 给我们提供了 [Promise](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) 允许我们使用链式的回调，当然 [Async/Await](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) 提供了更简洁的方案，让我们写出更加线性的代码
+[回调函数](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) 太乱了，所以 ES6 给我们提供了 [Promise](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) 允许我们使用链式的回调，当然 [Async/Await](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) 提供了更简洁的方案，可以让我们写出更加线性的代码
 
 ```javascript
 // 错误 ❌
@@ -340,33 +342,32 @@ async function sendUserStatistics() {
 
 # 错误处理
 
-## 处理抛出的异常和 rejected 的 promise
+## 处理抛出的异常和 rejected 的 Promise
 
 正确的处理异常可以使我们的代码更加的简装，也会更方便的排查问题。
 
 ```javascript
 // 错误 ❌
 try {
-  // Possible erronous code
+  // 可能出错的代码
 } catch (e) {
   console.log(e);
 }
 
 // 正确 ✅
 try {
-  // Possible erronous code
+  // 可能出错的代码
 } catch (e) {
-  // Follow the most applicable (or all):
-  // 1- More suitable than console.log
+  // 比 console.log 更合适
   console.error(e);
 
-  // 2- Notify user if applicable
+  // 通知用户
   alertUserOfError(e);
 
-  // 3- Report to server
+  // 通知服务器
   reportErrorToServer(e);
 
-  // 4- Use a custom error handler
+  // 使用自定义的异常处理
   throw new CustomError(e);
 }
 ```
@@ -380,26 +381,26 @@ try {
 ```javascript
 // 错误 ❌
 function generateHash(str) {
-  // Hash variable
+  // 哈希变量
   let hash = 0;
 
-  // Get the length of the string
+  // 获取字符串的长度
   let length = str.length;
 
-  // If the string is empty return
+  // 如果长度是空的就返回
   if (!length) {
     return hash;
   }
 
-  // Loop through every character in the string
+  // 遍历字符
   for (let i = 0; i < length; i++) {
-    // Get character code.
+    // 获取字符 code
     const char = str.charCodeAt(i);
 
-    // Make the hash
+    // 为 hash 赋值
     hash = (hash << 5) - hash + char;
 
-    // Convert to 32-bit integer
+    // 转换为 32 位的整型
     hash &= hash;
   }
 }
@@ -415,7 +416,7 @@ function generateHash(str) {
   for (let i = 0; i < length; i++) {
     const char = str.charCodeAt(i);
     hash = (hash << 5) - hash + char;
-    hash = hash & hash; // Convert to 32bit integer
+    hash = hash & hash; // 转换为 32 位的整型
   }
   return hash;
 }
