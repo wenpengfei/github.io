@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 家庭网络和服务搭建 · 夜色镇歌</title><meta name="description" content="家庭网络和服务搭建 - 文鹏飞"><meta name="baidu_union_verify" content="72cef2f38e5e048b980ace9972697c53"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://catwen.cn/atom.xml" title="夜色镇歌"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">文章</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="http://weibo.com/333241589" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="https://github.com/wenpengfei" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">家庭网络和服务搭建</h1><div class="post-info">2021年12月12日</div><div class="post-content"><p><img src="/images/home-networking-and-service/1.jpg" alt></p>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>笔者对家庭网络和服务的需求如下：</p>
+<ol>
+<li>家里所有设备都可以出国留学，并且可以流畅观看 <code>Netflix</code> 和 <code>Youtube</code></li>
+<li>下载文件时不影响在线流媒体，最好可以低功耗离线下载</li>
+<li>一个可靠的数据中心存储相机拍的大尺寸的照片和视频，并且家里的设备都可以访问</li>
+<li>影音服务器，可以使全家的电视、移动设备等访问下载的电影、电视剧、照片，最好可以串流</li>
+<li>自建网盘并且可以在家庭网络之外访问</li>
+<li>局域网万兆网络</li>
+</ol>
+<h2 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h2><p>虽说买一个可以刷<code>梅林</code>的路由器就可以实现所有设备出国，但是看奈飞压力还是太大，所以还是选择了软路由，并且软路由最好还可以支持虚拟机，这样可玩性也更高一些，经过一系列的对比选择了 <code>3865U</code>，轻度的虚拟机需求它也是可以胜任的，但是它的 <code>NAT</code> 性能是过剩的。如果没有虚拟机的需求，并且家里宽带在 <code>1000M 以下</code>买个 <code>J1900</code> 或者 <code>R2S</code> 跑满带宽是完全没有问题的。</p>
+<p>第二个需求是需要一个优秀的流量控制工具，经过一番研究，我的固件选择了<code>爱快</code>，并且在爱快的虚拟机里装了 <code>Openwrt</code>。爱快做流量控制，<code>Openwrt</code> 出国看 <code>Netflix</code> 和 <code>Youtube</code>，各司其职，相处融洽。</p>
+<p>第三个需求显然是需要一个 <code>NAS</code> 了，关于 NAS 可以买成品的群辉、威联通等等，动手能力强的也可以淘一些硬件自己组装，笔者是自己组装，某海产品平台淘了一些硬件又在某宝买了新的机箱不含硬盘花了大概 2000 左右吧，光是机箱就花了 1000 大洋，肉疼。</p>
+<p>NAS 组装好后使用起来还是很爽的，系统选择了 <code>unraid</code>，装了 <code>transmission</code> 下载 pt ，下载好的电影、电视剧通过 <code>Plex</code> 串流到电视或者移动设备上，也可以用 <code>Kodi</code> 局域网直连，笔者在三楼，没有电视，买了个投影仪看电影，配合 5.1 的音响观影效果还是挺震撼的。父母在二楼，电视是显示效果出色的 65 寸索尼电视，装了 <code>Netflix</code> 和 <code>SmartYoutubeTV</code>，奈飞很多 <code>4K</code> 和<code>杜比视界</code>的片源，观感爆棚。之后又在 NAS 上装了 <code>NextCloud</code>。</p>
+<p>因为经常有大文件在电脑和 NAS 之间互传的需求，千兆的网线速度最大只能达到 <code>113M</code> 左右，几百 G 的传输要等好久，所以又买了两个光口<code>万兆网卡</code>装在了 NAS 和台式机上，这样他们互联速度能到 <code>1G</code>，这个速度谁用谁知道，至此就满足了所有的需求。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>安装宽带的时候记得让师傅把光猫调为桥接模式，这样可以一劳永逸，因为光猫是运营商的，路由器是我们自己的，以后使用起来也比较方便，想让家里所有的设备都在一个局域网只需要把主路由的 <code>DHCP</code> 服务打开，其余的路由器都关闭或者改为 <code>AP 模式</code>。</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2021/12/05/writing-clean-code-es6/" class="next">下一篇</a></div><div class="copyright"><p>© 2015 - 2021 <a href="https://catwen.cn">文鹏飞</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script data-ad-client="ca-pub-9719602535480843" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?508f12c140e77c01b9acd8055bcea5e2";
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s);
+})();</script></body></html>
