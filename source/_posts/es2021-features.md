@@ -45,13 +45,13 @@ setOpts({ cat: 'meow' })
 数字太长的话可读性就会变差，有了分隔符会好些
 
 ```javascript
-1_000_000_000           // 10 亿
-101_475_938.38          // And this is hundreds of millions
+1_000_000_000           
+101_475_938.38 
 
-let fee = 123_00;       // $123 (12300 cents, apparently)
-let fee = 12_300;       // $12,300 (woah, that fee!)
-let amount = 12345_00;  // 12,345 (1234500 cents, apparently)
-let amount = 123_4500;  // 123.45 (4-fixed financial)
+let fee = 123_00;       // $123
+let fee = 12_300;       // $12,300
+let amount = 12345_00;  // 12,345
+let amount = 123_4500;  // 123.45
 let amount = 1_234_500; // 1,234,500
 ```
 
@@ -61,7 +61,9 @@ let amount = 1_234_500; // 1,234,500
 0xA0_B0_C0;
 ```
 
-## Promise.any 和聚合异常
+## Promise.any 和 AggregateError
+
+`Promise.any()` 接收一个 Promise 可迭代对象，只要其中的一个 Promise 成功，就返回那个已经成功的 Promise 。如果可迭代对象中没有一个 Promise 成功（即所有的 Promise 都失败/拒绝），就返回一个失败的 Promise 和 `AggregateError` 类型的实例，它是 Error 的一个子类，用于把单一的错误集合在一起。本质上，这个方法和 Promise.all() 是相反的。
 
 ```javascript
 Promise.any([
@@ -69,16 +71,14 @@ Promise.any([
   fetch('https://v8.dev/blog').then(() => 'blog'),
   fetch('https://v8.dev/docs').then(() => 'docs')
 ]).then((first) => {
-  // Any of the promises was fulfilled.
+  // 有任何一个成功的 Promise
   console.log(first);
   // → 'home'
 }).catch((error) => {
-  // All of the promises were rejected.
+  // 所有的 Promise 都失败
   console.log(error);
 });
 ```
-
-上面的 `error` 对象就是一个 `聚合异常`
 
 ## String.prototype.replaceAll
 
@@ -96,22 +96,22 @@ Promise.any([
 ```
 
 ## WeakRefs 和 FinalizationRegistry 对象
-使用 `Wea​​kRef` 类可以创建对对象的弱引用，在对象被垃圾收集后可以运行使用 `FinalizationRegistry` 创建的自定义终结器（finalizers），两者可以独立使用，也可以一起使用，具体的规范参考： [tc39/proposal-weakrefs](https://github.com/tc39/proposal-weakrefs)
+使用 `Wea​​kRef` 类可以创建对对象的弱引用，在对象被垃圾收集后可以运行使用 `FinalizationRegistry` 创建的自定义终结器（finalizers），两者可以独立使用，也可以一起使用，具体的规范可以参考：[tc39/proposal-weakrefs](https://github.com/tc39/proposal-weakrefs)
 
 ```javascript
 let target = {};
 let wr = new WeakRef(target);
 
-//wr and target aren't the same
+// wr 和 target 不相同
 
 
-// Creating a new registry
+// 创建一个 FinalizationRegistry
 const registry = new FinalizationRegistry(heldValue => {
   // ....
 });
 
 registry.register(myObject, "some value", myObject);
-// ...some time later, if you don't care about `myObject` anymore...
+// 当你不再关心 myObject 对象
 registry.unregister(myObject);
 ```
 
